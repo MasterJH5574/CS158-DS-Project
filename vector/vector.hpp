@@ -32,7 +32,6 @@ public:
 	public:
 		/**
 		 * return a new iterator which pointer n-next elements
-		 *   even if there are not enough elements, just return the answer.
 		 * as well as operator-
 		 */
 		iterator operator+(const int &n) const {
@@ -41,8 +40,8 @@ public:
 		iterator operator-(const int &n) const {
 			//TODO
 		}
-		// return th distance between two iterator,
-		// if these two iterators points to different vectors, throw invaild_iterator.
+		// return the distance between two iterators,
+		// if these two iterators point to different vectors, throw invaild_iterator.
 		int operator-(const iterator &rhs) const {
 			//TODO
 		}
@@ -73,7 +72,7 @@ public:
 		 */
 		T& operator*() const{}
 		/**
-		 * a operator to check whether two iterators are same (pointing to the same memory).
+		 * a operator to check whether two iterators are same (pointing to the same memory address).
 		 */
 		bool operator==(const iterator &rhs) const {}
 		bool operator==(const const_iterator &rhs) const {}
@@ -92,7 +91,7 @@ public:
 	};
 	/**
 	 * TODO Constructs
-	 * Atleast three: default constructor, copy constructor and a constructor for std::vector
+	 * Atleast two: default constructor, copy constructor
 	 */
 	vector() {}
 	vector(const vector &other) {}
@@ -147,10 +146,6 @@ public:
 	 */
 	size_t size() const {}
 	/**
-	 * returns the number of elements that can be held in currently allocated storage.
-	 */
-	size_t capacity() const {}
-	/**
 	 * clears the contents
 	 */
 	void clear() {}
@@ -161,7 +156,7 @@ public:
 	iterator insert(iterator pos, const T &value) {}
 	/**
 	 * inserts value at index ind.
-	 * after inserting, this->at(ind) == value is true
+	 * after inserting, this->at(ind) == value
 	 * returns an iterator pointing to the inserted value.
 	 * throw index_out_of_bound if ind > size (in this situation ind can be size because after inserting the size will increase 1.)
 	 */
