@@ -14,15 +14,15 @@
 
 * 请将你的 CLion 与 WSL 连接好，参见官方文档 [https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html) 或博客 [https://blog.csdn.net/u010606602/article/details/80782650](https://blog.csdn.net/u010606602/article/details/80782650)
 
-  <img src="clion-wsl.png" alt="Failed to load picture" style="zoom:80%;" />
+  <img src="pic/clion-wsl.png" alt="Failed to load picture" style="zoom:80%;" />
 
 * 在 CLion Settings - Build, Execution, Deployment - Dynamic Analysis Tools - Valgrind 中将 Valgrind executable 设为 `/usr/bin/valgrind`，将 Analysis options 设为 `--leak-check=full --leak-resolution=med --track-origins=yes --vgdb=no`
 
-  <img src="clion-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
+  <img src="pic/clion-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
 
 * 退出 Settings，在右上角 Run 的右侧你可以看到 “Run with Valgrind Memcheck”，点击即可进行内存泄漏检测。
 
-  <img src="clion-run-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
+  <img src="pic/clion-run-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
 
 ## 在 Visual Studio Code 中使用
 
@@ -34,7 +34,7 @@
 
 * 在 VSCode 中 Reopen Folder in WSL。
 
-  <img src="vscode-wsl.png" alt="Failed to load picture" style="zoom: 80%;" />
+  <img src="pic/vscode-wsl.png" alt="Failed to load picture" style="zoom: 80%;" />
 
 * Build 得到可执行文件后，在任务栏 Terminal - Run Task 中选择 "valgrind" 来运行 Valgrind。
 
@@ -50,7 +50,7 @@
 
 假设 Build 编译得到的可执行文件为 code，使用 `valgrind --tool=memcheck --leak-check=full --leak-resolution=med --track-origins=yes --vgdb=no ./code` 命令运行 Valgrind。
 
-<img src="wsl-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
+<img src="pic/wsl-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
 
 ## 什么？你是 Mac 用户？
 
@@ -58,9 +58,9 @@
 
 1. 使用 XCode 自带的内存检测工具：
 
-<img src="mac-xcode.JPG" alt="Failed to load picture." style="zoom: 25%;" />
+<img src="pic/mac-xcode.JPG" alt="Failed to load picture." style="zoom: 25%;" />
 
-<img src="mac-xcode1.png" alt="Failed to load picture." style="zoom:40%;" />
+<img src="pic/mac-xcode1.png" alt="Failed to load picture." style="zoom:40%;" />
 
 2. 在虚拟机中跑 Linux，再装 Valgrind……
 
