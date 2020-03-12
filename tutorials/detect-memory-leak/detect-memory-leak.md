@@ -26,7 +26,7 @@
 
 ## 在 Visual Studio Code 中使用
 
-**不保证此教程绝对正确~~，因为我从来没有用过 VSCode~~，还望大家多请教多摸索。**
+**不保证此教程绝对正确 ~~，因为我从来没有用过 VSCode~~ ，还望大家多请教多摸索。**
 
 * 请将你的 VSCode 与 WSL 连接好，参见官方文档 [https://code.visualstudio.com/docs/remote/wsl](https://code.visualstudio.com/docs/remote/wsl)
 
