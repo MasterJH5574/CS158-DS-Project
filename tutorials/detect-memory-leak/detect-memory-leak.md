@@ -52,6 +52,18 @@
 
 <img src="wsl-valgrind.png" alt="Failed to load picture." style="zoom:80%;" />
 
+## 什么？你是 Mac 用户？
+
+~~Mac 太贵了买不起orz~~ ……这里提供两种可以考虑的方案
+
+1. 使用 XCode 自带的内存检测工具：
+
+<img src="mac-xcode.JPG" alt="Failed to load picture." style="zoom: 25%;" />
+
+<img src="mac-xcode1.png" alt="Failed to load picture." style="zoom:40%;" />
+
+2. 在虚拟机中跑 Linux，再装 Valgrind……
+
 ## 最后……
 
 最好的解决方法也许是一次性写出一份不内存泄漏的代码？
