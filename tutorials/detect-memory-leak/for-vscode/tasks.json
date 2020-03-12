@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "valgrind",
+            "type": "shell",
+            "command": "valgrind",
+            "args": [
+                "--tool=memcheck",
+                "--leak-check=full",
+                "--leak-resolution=med",
+                "--track-origins=yes",
+                "--vgdb=no",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        }
+    ]
+}

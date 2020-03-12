@@ -34,7 +34,7 @@
 
 * **其中 `vector.hpp` 是你仅需要实现的文件，也是最终提交的代码。**
 
-* `exceptions.hpp` 与 `utility.hpp` 是两个辅助文件**(不可修改)**，提供了异常处理类与 pair 类，你可以在你的代码中自由使用。
+* `exceptions.hpp` 与 `utility.hpp` 是两个辅助文件(**不可修改**)，提供了异常处理类与 pair 类，你可以在你的代码中自由使用。
 * data 文件夹中有多组测试数据，分别位于各个文件夹中。其中标有 "memcheck" 的数据是用来进行**内存泄漏检查**的。
 
 ## 任务说明
@@ -69,7 +69,11 @@
 
 以 vector 为例，若要在本地测试，请将你的代码 `vector.hpp`、相应测试点下的 cpp 文件 `code.cpp`  和 `class-bint.hpp`, `class-integer.hpp`, `class-matrix.hpp`, `utility.hpp`, `exceptions.hpp` 放在同一个目录下编译运行。
 
-若要检测内存泄漏，请使用 valgrind。
+### 内存泄漏？
+
+如果你想在本地测试自己的代码是否存在内存泄漏，请点击[如何检测内存泄漏？](https://github.com/MasterJH5574/CS158-DS-Project/blob/master/tutorials/detect-memory-leak/detect-memory-leak.md)
+
+当然，**你不一定非要在自己电脑上测**，很多人也选择不在本地测，比如你们的傅凌玥学姐。如果你提交的代码中存在内存泄漏，OJ 会告诉你的。
 
 ## 评测及提交方式
 
