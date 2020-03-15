@@ -83,8 +83,10 @@
 
 OJ 地址：[http://106.54.133.230](http://106.54.133.230)
 
+***特别注意：提交的题为 "vector(Honor)" 和 "deque(Honor)"，请大家不要交错题了！***
+
 * 评测开 O2 优化
-* 关于题目说明中的“Time Limit”：以 vector 为例，题目说明里 vector 的时限为 5s，指的是**跑完 one, two, three 三个目录下的 code.cpp 总共需要的时间**。
+* 关于题目说明中的“Time Limit”：以 vector 为例，题目说明里 vector 的时限为 5s，指的是**跑完 one, two, three 三个目录下的 code.cpp 的总时间不能超过 5s**。
 * 由于 Valgrind 内存检测会导致程序运行时间增长，**OJ 上的 Memory Check 会相应扩大时限**。
 
 ## 迟交惩罚
