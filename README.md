@@ -57,7 +57,7 @@
 
 补充完成一个 deque 类，接口与 vector 基本一致。
 
-**注意**：deque 要求支持以不超过 `O(log_n)` 的时间完成***任意位置***的插入和删除，但随机访问的复杂度要求降低为 `O(log_n)`
+**注意**：deque 要求支持以不超过 `O(sqrt(n))` 的时间完成***任意位置***的插入和删除，但随机访问的复杂度要求降低为 `O(sqrt(n))`
 
 ### map
 
@@ -85,9 +85,10 @@ OJ 地址：[http://106.54.133.230](http://106.54.133.230)
 
 ***特别注意：提交的题为 "vector(Honor)" 和 "deque(Honor)"，请大家不要交错题了！***
 
-* 评测开 O2 优化
+* 以 vector 为例，你只需要将你 `vector.hpp` 中的代码贴到 OJ 上提交即可
+* 评测**开 O2 优化**
 * 关于题目说明中的“Time Limit”：以 vector 为例，题目说明里 vector 的时限为 5s，指的是**跑完 one, two, three 三个目录下的 code.cpp 的总时间不能超过 5s**。
-* 由于 Valgrind 内存检测会导致程序运行时间增长，**OJ 上的 Memory Check 会相应扩大时限**。
+* 由于 Valgrind 内存检测会导致程序运行时间增长，**OJ 上的 Memory Check 会相应扩大时限**。参见这个 issue：[https://github.com/MasterJH5574/CS158-DS-Project/issues/1](https://github.com/MasterJH5574/CS158-DS-Project/issues/1)
 
 ## 迟交惩罚
 
