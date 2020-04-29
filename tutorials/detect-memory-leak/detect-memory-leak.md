@@ -54,15 +54,47 @@
 
 ## 什么？你是 Mac 用户？
 
-~~Mac 太贵了买不起orz~~ ……这里提供两种可以考虑的方案
+~~Mac 太贵了买不起orz~~ ……这里提供几种可以考虑的方案
 
-1. 使用 XCode 自带的内存检测工具：
+1. 安装非官方的valgrind（官方的valgrind不支持10.13以上的Mac，即Mojave、Catalina用户不能使用官网的valgrind）
+
+https://github.com/LouisBrunner/valgrind-macos
+
+### Usage
+In order to use this version, use the following command:
+
+`brew install --HEAD https://raw.githubusercontent.com/sowson/valgrind/master/valgrind.rb`
+
+In case you already have Valgrind installed, you will need to either `unlink` it first or `reinstall` it.
+
+### CLion
+
+Valgridn executable: /usr/local/bin/valgrind
+
+Analysis options: --leak-check=full --leak-resolution=med --track-origins=yes --vgdb=no
+
+For testing/developing/checking: --trace-syscalls=yes
+
+----
+
+如果上面那个非官方valgrind不管用，还可以试试另一个。
+
+https://github.com/sowson/valgrind
+
+安装方式同上。
+
+### Reference：
+https://stackoverflow.com/questions/52732036/how-to-install-valgrind-on-macos-mojave10-14-with-homebrew
+
+---
+
+2. 使用 XCode 自带的内存检测工具：
 
 <img src="pic/mac-xcode.JPG" alt="Failed to load picture." style="zoom: 25%;" />
 
 <img src="pic/mac-xcode1.png" alt="Failed to load picture." style="zoom:40%;" />
 
-2. 在虚拟机中跑 Linux，再装 Valgrind……
+3. 在虚拟机中跑 Linux，再装 Valgrind……
 
 ## 最后……
 
