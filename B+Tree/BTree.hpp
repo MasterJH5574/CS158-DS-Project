@@ -47,39 +47,49 @@ namespace sjtu {
         private:
             // Your private members go here
         public:
-            // modify by iterator
-            bool modify(const Value& value){
+            iterator() {
+                
+            }
+            iterator(const iterator& other) {
                 
             }
 
-            iterator() {
-                // TODO Default Constructor
+            // modify by iterator
+            bool modify(const Value& value) {
+                
             }
-            iterator(const iterator& other) {
-                // TODO Copy Constructor
+
+            Key getKey() const {
+
             }
-            // Return a new iterator which points to the n-next elements
+
+            Value getValue() const {
+
+            }
+
             iterator operator++(int) {
-                // Todo iterator++
+
             }
+
             iterator& operator++() {
-                // Todo ++iterator
+                
             }
             iterator operator--(int) {
-                // Todo iterator--
+                
             }
+
             iterator& operator--() {
-                // Todo --iterator
+                
             }
 
             // Overloaded of operator '==' and '!='
             // Check whether the iterators are same
             bool operator==(const iterator& rhs) const {
-                // Todo operator ==
+                
             }
 
             bool operator!=(const iterator& rhs) const {
-                // Todo operator !=
+                
             }
         };
         
