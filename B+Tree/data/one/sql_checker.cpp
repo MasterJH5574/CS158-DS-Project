@@ -219,7 +219,7 @@ void get_result(FILE *fp) {
 void BTree_tester(string filename) {
   FILE *fp;
   fp = NULL;
-  string program_name = "hello_world";
+  string program_name = "BTree";
   string cmd = "./" + program_name + " < " + filename;
 //    std::cout << "Command: " << cmd << std::endl;
 //    system(cmd.c_str());

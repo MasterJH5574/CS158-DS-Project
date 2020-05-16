@@ -16,7 +16,7 @@ if returnID != 0:
     exit(-1)
 
 os.system('./insertionData > tmp && ./queryData > tmp && ./eraseData > tmp && rm tmp')
-returnID = os.system('g++ -o hello_world BTree.cpp -O2 -std=c++14 -g')
+returnID = os.system('g++ -o BTree BTree.cpp -O2 -std=c++14 -g')
 if returnID != 0:
     print('Fail to make your BTree, please check whether there exists any compilication error!')
     exit(-1)
