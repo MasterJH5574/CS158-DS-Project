@@ -87,7 +87,7 @@ void test_iterator() {
     printf("Test Iterator Traverse Pass!\n");
 
     printf("Test Iterator Lower Bound\n");
-    sjtu::BTree<int, long long>::iterator iter = lower_bound(v1[0]);
+    sjtu::BTree<int, long long>::iterator iter = tree.lower_bound(v1[0]);
     int cnt = 0;
     for (iter; iter != tree.end(); ++iter) {
         cnt++;
