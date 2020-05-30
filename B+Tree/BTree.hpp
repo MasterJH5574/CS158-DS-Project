@@ -1,4 +1,3 @@
-#include "utility.hpp"
 #include <functional>
 #include <cstddef>
 #include "exception.hpp"
