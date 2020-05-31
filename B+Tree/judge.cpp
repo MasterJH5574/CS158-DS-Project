@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <vector>
 #include <map>
-#include "BTree.hpp"
+#include "tmp.hpp"
 
 using std::cin;
 using std::cout;
@@ -108,9 +108,15 @@ void test_iterator() {
 void test_erase() {
     printf("Test Erase.\n");
     sjtu::BTree<int, long long> tree;
-    for (int i = 1; i <= n / 3; ++i) {
+    for (int i = 1; i < n / 2; ++i) {
         tree.erase(v1[i]);
         if (tree.at(v1[i])) {
+            cerr << "erase error!" << endl;
+            return;
+        }
+    }
+    for (int i = n / 2; i <= n; ++i) {
+        if (tree.at(v1[i]) != v2[i]) {
             cerr << "erase error!" << endl;
             return;
         }
