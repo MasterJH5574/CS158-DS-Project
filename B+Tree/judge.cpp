@@ -81,6 +81,7 @@ void test_iterator() {
     }
     for (int i = 1; i <= n; ++i) {
         if (mp[v1[i]] != v2[i]) {
+            cerr << "Iterator Traverse Error" << endl;
             return;
         }
     }
@@ -98,6 +99,7 @@ void test_iterator() {
         }
     }
     if (cnt != 0) {
+        cerr << "Iterator Lower Bound Error" << endl;
         return;
     }
     printf("Test Iterator Lower Bound Pass!\n");
