@@ -47,7 +47,7 @@ void test_clear() {
     if (tree.at(4321)) {
         return;
     }
-    printf("Test Clear Pass.\n");
+    printf("Test Clear Pass!\n");
 }
 
 void test_insert() {
@@ -61,7 +61,7 @@ void test_insert() {
 
 
 void test_query() {
-    printf("Test Query\n");
+    printf("Test Query.\n");
     sjtu::BTree<int, long long> tree;
     for (int i = 1; i <= n; ++i) {
         if (tree.at(v1[i]) != v2[i]) {
@@ -73,7 +73,7 @@ void test_query() {
 }
 
 void test_iterator() {
-    printf("Test Iterator Traverse\n");
+    printf("Test Iterator Traverse.\n");
     sjtu::BTree<int, long long> tree;
     std::map<int, long long> mp;
     for (sjtu::BTree<int, long long>::iterator iter = tree.begin(); iter != tree.end(); iter++) {
@@ -86,7 +86,7 @@ void test_iterator() {
     }
     printf("Test Iterator Traverse Pass!\n");
 
-    printf("Test Iterator Lower Bound\n");
+    printf("Test Iterator Lower Bound.\n");
     sjtu::BTree<int, long long>::iterator iter = tree.lower_bound(v1[0]);
     int cnt = 0;
     for (iter; iter != tree.end(); ++iter) {
@@ -100,11 +100,11 @@ void test_iterator() {
     if (cnt != 0) {
         return;
     }
-    printf("Test Iterator Lower Bound\n");
+    printf("Test Iterator Lower Bound Pass!\n");
 }
 
 void test_erase() {
-    printf("Test Erase\n");
+    printf("Test Erase.\n");
     sjtu::BTree<int, long long> tree;
     for (int i = 1; i <= n / 3; ++i) {
         tree.erase(v1[i]);
