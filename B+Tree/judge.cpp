@@ -88,19 +88,17 @@ void test_iterator() {
     printf("Test Iterator Traverse Pass!\n");
 
     printf("Test Iterator Lower Bound.\n");
-    sjtu::BTree<int, long long>::iterator iter = tree.lower_bound(v1[0]);
-    int cnt = 0;
-    for (iter; iter != tree.end(); ++iter) {
-        cnt++;
-    }
-    for (int i = 1; i <= n; ++i) {
-        if (v1[i] >= v1[0]) {
-            cnt--;
+    sjtu::BTree<int, long long>::iterator iter;
+    std::map<int, long long>::iterator mp_iter;
+    for (int i = 0; i < MOD; i+= aa) {
+        mp_iter = mp.lower_bound(i);
+        if (mp_iter == mp.end())
+            continue;
+        iter = tree.lower_bound(i);
+        if (iter.getValue() != mp_iter->second) {
+            cerr << "Iterator Lower Bound Error" << endl;
+            return;
         }
-    }
-    if (cnt != 0) {
-        cerr << "Iterator Lower Bound Error" << endl;
-        return;
     }
     printf("Test Iterator Lower Bound Pass!\n");
 }
