@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <vector>
 #include <map>
-#include "tmp.hpp"
+#include "BTree.hpp"
 
 using std::cin;
 using std::cout;
@@ -101,6 +101,16 @@ void test_iterator() {
         }
     }
     printf("Test Iterator Lower Bound Pass!\n");
+
+    printf("Test Iterator Find.\n");
+    for (int i = 1; i <= n; ++i) {
+        iter = tree.find(v1[i]);
+        if (iter.getValue() != v2[i]) {
+            cerr << "Iterator Find Error" << endl;
+            return;
+        }
+    }
+    printf("Test Iterator Find Pass!\n");
 }
 
 void test_erase() {
