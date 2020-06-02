@@ -90,7 +90,7 @@ void test_iterator() {
     printf("Test Iterator Lower Bound.\n");
     sjtu::BTree<int, long long>::iterator iter;
     std::map<int, long long>::iterator mp_iter;
-    for (int i = 0; i < MOD; i+= aa) {
+    for (int i = 0; i < MOD; i+= aa * 2) {
         mp_iter = mp.lower_bound(i);
         if (mp_iter == mp.end())
             continue;
@@ -103,7 +103,7 @@ void test_iterator() {
     printf("Test Iterator Lower Bound Pass!\n");
 
     printf("Test Iterator Find.\n");
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n / 4; ++i) {
         iter = tree.find(v1[i]);
         if (iter.getValue() != v2[i]) {
             cerr << "Iterator Find Error" << endl;
@@ -123,7 +123,7 @@ void test_erase() {
             return;
         }
     }
-    for (int i = n / 2; i <= n; ++i) {
+    for (int i = n / 2; i <= n / 1.5; ++i) {
         if (tree.at(v1[i]) != v2[i]) {
             cerr << "erase error!" << endl;
             return;
